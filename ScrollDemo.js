@@ -49,6 +49,8 @@ function scroll(){
         totalHeight = totalHeight + pageHeight;
         if(scroTop<=totalHeight && (scroTop+clientHeight)>= preHeight) {
             console.log("**********Page active: " + (i+1) + "***********");
+        } else {
+            console.log("**********Page inactive: " + (i+1) + "***********");
         }
     }
     console.log("Scroll stop ...");
