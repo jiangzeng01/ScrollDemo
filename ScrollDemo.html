@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scroll page demo</title>
+    <link rel="stylesheet" href="ScrollDemo.css"/>
+</head>
+<body onscroll="scroll()">
+    <div id="header" class="header">
+        &nbsp;&nbsp;Header&nbsp;&nbsp;
+        <span id="0" class="page_link" onclick="ClickPage(event)">[1]</span>
+        <span id="1" class="page_link" onclick="ClickPage(event)">[2]</span>
+        <span id="2" class="page_link" onclick="ClickPage(event)">[3]</span>
+        <span id="3" class="page_link" onclick="ClickPage(event)">[4]</span>
+        <span id="4" class="page_link" onclick="ClickPage(event)">[5]</span>
+    </div>
+    <div id="content" class="content">
+        <div class="page" attr-index="0" style="height: 1000px; background: red">
+            <span class="page_index">1</span>
+        </div>
+        <div class="page" attr-index="1" style="height: 1200px; background: yellow">
+            <span class="page_index">2</span>
+        </div>
+        <div class="page" attr-index="2" style="height: 300px; background: red">
+            <span class="page_index">3</span>
+        </div>
+        <div class="page" attr-index="3" style="height: 400px; background: yellow">
+            <span class="page_index">4</span>
+        </div>
+        <div class="page" attr-index="4" style="height: 900px; background: red">
+            <span class="page_index">5</span>
+        </div>
+    </div>
+    <script src="ScrollDemo.js"></script>
+</body>
+</html>
