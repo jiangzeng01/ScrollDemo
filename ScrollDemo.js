@@ -6,7 +6,7 @@ var pageHeightArr = GetPageHeightArr();
 
 function ClickPage(e){
     var clickPageIndex = parseInt(e.target.id);
-    var scrollToValue = 1;
+    var scrollToValue = 0;
     for (var i=0;i<clickPageIndex;i++)
     {
         scrollToValue = scrollToValue + pageHeightArr[i];
@@ -47,7 +47,7 @@ function scroll(){
         var pageHeight = pageHeightArr[i];
         var preHeight = totalHeight;
         totalHeight = totalHeight + pageHeight;
-        if(scroTop<=totalHeight && (scroTop+clientHeight)>= preHeight) {
+        if(scroTop<totalHeight && (scroTop+clientHeight)>= preHeight) {
             console.log("**********Page active: " + (i+1) + "***********");
         } else {
             console.log("**********Page inactive: " + (i+1) + "***********");
