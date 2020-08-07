@@ -1,12 +1,13 @@
 var headerHeight = 60;
 var footerHeight = 0;
+var otherContentHeight = 1500;
 var content=document.getElementById('content');
 var pages=getByClass(content, 'page');
 var pageHeightArr = GetPageHeightArr();
 
 function ClickPage(e){
     var clickPageIndex = parseInt(e.target.id);
-    var scrollToValue = 0;
+    var scrollToValue = otherContentHeight;
     for (var i=0;i<clickPageIndex;i++)
     {
         scrollToValue = scrollToValue + pageHeightArr[i];
@@ -40,7 +41,7 @@ function getByClass(oParent, sClass){
 function scroll(){
     console.log("Scroll start ...");
     var clientHeight = window.innerHeight - headerHeight - footerHeight;
-    var scroTop = document.documentElement.scrollTop;
+    var scroTop = document.documentElement.scrollTop - otherContentHeight;
     var totalHeight = 0;
     for (var i=0;i<pages.length;i++)
     { 
